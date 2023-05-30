@@ -1,0 +1,18 @@
+Comando para inicializar o zookeeper:
+  - zookeeper-server-start.bat config\zookeeper.properties
+
+Comando para inicializar o Kafka
+  - kafka-server-start.bat config\server.properties
+
+Criando um tópico
+  - kafka-topics.bat --create --topic ECOMMERCE_NEW_ORDER --bootstrap-server localhost:9092
+
+Escrevendo alguma coisa no tópico
+  - kafka-console-producer.bat --topic ECOMMERCE_NEW_ORDER --bootstrap-server localhost:9092
+
+Lendo as mensagens do tópico
+  - kafka-console-consumer.bat --topic ECOMMERCE_NEW_ORDER --from-beginning --bootstrap-server localhost:9092
+
+Verificar todos os grupos que estão sendo executados
+kafka-consumer-groups.bat --all-groups --bootstrap-server localhost:9092 --describe
+
